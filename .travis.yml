@@ -1,10 +1,10 @@
 language: python
 python:
  - 3.5
- - nightly
 install:
  - pip install -r travis/requirements.txt
  - pip install coveralls
 script:
  - python3 -m unittest
+ - coverage run --source=/home/zackchen/Desktop/EECS 398/"Week 9" unittest
 after_success: coveralls
